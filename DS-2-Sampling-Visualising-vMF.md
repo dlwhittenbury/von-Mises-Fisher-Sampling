@@ -28,33 +28,33 @@ then it becomes clear how it should be generalised to higher dimensions. As disc
 if one takes the natural logarithm of the von Mises distribution it is found to be linear in a unit random vector.
 This is now demonstrated,
 
-\begin{eqnarray}
+\begin{eqnarray*}
 \log p(\theta; \mu,\kappa) & = & \kappa \cos (\theta - \mu) - \log I_{0}(\kappa) - \log 2\pi \\
 & = & \kappa \boldsymbol{\mu}^{\top} \mathbf{x} - \log I_{0}(\kappa) - \log 2\pi \ ,
-\end{eqnarray}
+\end{eqnarray*}
 
 where we have defined two unit vectors $\boldsymbol{\mu}$ and $\mathbf{x}$ such that
 
-\begin{equation}
+\begin{equation*}
 \boldsymbol{\mu} = (\cos\mu,\sin\mu)^{\top} \quad , \quad \mathbf{x} = (\cos\theta,\sin\theta)^{\top}
-\end{equation}
+\end{equation*}
 
 and we have used the following trignometric identity
 
-\begin{equation}
+\begin{equation*}
 \cos(A+B) = \cos A \cos B + \sin A \sin B \ .
-\end{equation}
+\end{equation*}
 
 
 
 From this we see that the appropriate generalisation to the ($p-1$)-dimensional hypersphere has a log density linear in $\mathbf{x}$. The $(p-1)$-dimension von Mises-Fisher probability density function for a unit random vector $\mathbf{x}\in \mathbb{S}^{p-1} \subset \mathbb{R}^{p}$ is
 
-\begin{equation}
+\begin{equation*}
 f(\mathbf{x}; \boldsymbol{\mu},\kappa)
 = \left( \frac{\kappa}{2} \right)^{p/2 - 1}
 \frac{1}{\Gamma(p/2)I_{p/2 -1}(\kappa)} \exp \left(\kappa \boldsymbol{\mu}^{\top}\mathbf{x}\right)
 \equiv C_{p}(\kappa) \exp \left(\kappa \boldsymbol{\mu}^{\top}\mathbf{x}\right)
-\end{equation}
+\end{equation*}
 
 where
 
@@ -68,28 +68,28 @@ A few observations:
 
 - the distribution is rotationally symmetric about $\boldsymbol{\mu}$
 - If $O$ is an orthogonal transformation ($O^{\top}O = 1$), then
-\begin{equation}
+\begin{equation*}
 f(O\mathbf{x}; O\boldsymbol{\mu},\kappa)
 = C_{p}(\kappa) \exp \left(\kappa (O\boldsymbol{\mu})^{\top}(O\mathbf{x})\right)
 = C_{p}(\kappa) \exp \left(\kappa \boldsymbol{\mu}^{\top}O^{\top}O\mathbf{x}\right)
 = C_{p}(\kappa) \exp \left(\kappa \boldsymbol{\mu}^{\top}\mathbf{x}\right)
 = f(\mathbf{x}; \boldsymbol{\mu},\kappa)
-\end{equation}
+\end{equation*}
 
 - A useful property is that under multiplication
 
-\begin{equation}
+\begin{equation*}
 f(\mathbf{x}; \boldsymbol{\mu}_{1},\kappa_{1}) f(\mathbf{x}; \boldsymbol{\mu}_{2},\kappa_{2})  =f(\mathbf{x}; \boldsymbol{\mu},\kappa)
-\end{equation}
+\end{equation*}
 where
-\begin{equation}
+\begin{equation*}
 \boldsymbol{\mu} = \frac{\kappa_{1}\boldsymbol{\mu}_{1} + \kappa_{2}\boldsymbol{\mu}_{2} }{\Vert \kappa_{1}\boldsymbol{\mu}_{1} + \kappa_{2}\boldsymbol{\mu}_{2} \Vert} \quad .
-\end{equation}
+\end{equation*}
 
 and
-\begin{equation}
+\begin{equation*}
 \kappa = \Vert \kappa_{1}\boldsymbol{\mu}_{1} + \kappa_{2}\boldsymbol{\mu}_{2} \Vert
-\end{equation}
+\end{equation*}
 
 - as $\kappa\to \infty$ the clustering about the mean direction $\boldsymbol{\mu}$ increases
 
@@ -99,33 +99,33 @@ A few special cases:
 - $\kappa=0$ it is the uniform distribution on the $(p-1)$-dimensional hypersphere
 
 - In the case of the unit sphere the normalisation coefficient simplifies to
-\begin{equation}
+\begin{equation*}
 C_{3}(\kappa) = \frac{\kappa}{\sinh\kappa}
-\end{equation}
+\end{equation*}
 
 
 The unit random vector $\mathbf{x}$ can be decomposed using a tangent-normal decomposition, i.e., components tangent to and perpendicular to the mean direction such that  
 
-\begin{eqnarray}
+\begin{eqnarray*}
 \mathbf{x}
 & = & (\mathbf{x}\cdot \boldsymbol{\mu}) \boldsymbol{\mu} + (\mathbf{x} - (\mathbf{x}\cdot \boldsymbol{\mu}) \boldsymbol{\mu})\\
 & = & t \boldsymbol{\mu} + (I_{p} - \boldsymbol{\mu}\boldsymbol{\mu}^{\top})\mathbf{x}\\
 & = & t \boldsymbol{\mu} + \Vert (I_{p} - \boldsymbol{\mu}\boldsymbol{\mu}^{\top})\mathbf{x}\Vert \frac{(I_{p} - \boldsymbol{\mu}\boldsymbol{\mu}^{\top})\mathbf{x}}{\Vert (I_{p} - \boldsymbol{\mu}\boldsymbol{\mu}^{\top})\mathbf{x}\Vert}\\
 & = & t \boldsymbol{\mu} + \sqrt{1-t^{2}} \boldsymbol{\xi} \quad ,
-\end{eqnarray}
+\end{eqnarray*}
 where
 - $t\equiv \mathbf{x}\cdot \boldsymbol{\mu}$,
 - $I_{p}$ is the p-dimensional identity matrix,
 - $\boldsymbol{\xi} = \frac{(I_{p} - \boldsymbol{\mu}\boldsymbol{\mu}^{\top})\mathbf{x}}{\Vert (I_{p} - \boldsymbol{\mu}\boldsymbol{\mu}^{\top})\mathbf{x}\Vert}$  such that $\boldsymbol{\xi}$ is normal to $\boldsymbol{\mu}$,
 -  and we have used pythagorus' theorem ($a^{2} + b^{2} = c^{2}$)
-\begin{equation}
+\begin{equation*}
 1= \Vert x \Vert^{2} = \Vert (I_{p} - \boldsymbol{\mu}\boldsymbol{\mu}^{\top})\mathbf{x}\Vert^{2} + \Vert t \boldsymbol{\mu}\Vert^{2}  =  \Vert I_{p} - \boldsymbol{\mu}\boldsymbol{\mu}^{\top}\Vert^{2}\Vert\mathbf{x}\Vert^{2} + t^{2} \Vert \boldsymbol{\mu}\Vert^{2}
 =\Vert I_{p} - \boldsymbol{\mu}\boldsymbol{\mu}^{\top}\Vert^{2} + t^{2}\\
-\end{equation}
+\end{equation*}
 which leads us to
-\begin{equation}
+\begin{equation*}
 \Vert I_{p} - \boldsymbol{\mu}\boldsymbol{\mu}^{\top}\Vert = \sqrt{1-t^{2}} \quad .
-\end{equation}
+\end{equation*}
 
 
 In the tangent-normal decomposition we see that $t$ is invariant under rotation about $\boldsymbol{\mu}$, because
@@ -136,11 +136,11 @@ it is parallel to $\boldsymbol{\mu}$, while $\boldsymbol{\xi}$ transforms as $\b
 
 To visualise what is happening here. Consider the following diagram for the dimension $p=3$.
 
-<!-- ![Tangent-normal decomposition](./tangent-normal-decomp.jpg) -->
+![Tangent-normal decomposition](./tangent-normal-decomp.jpg)
 
-<center>
+<!-- <center>
 <img src="tangent-normal-decomp.jpg" width="400">
-</center>
+</center> -->
 
 
 
@@ -156,11 +156,11 @@ by Wood in 1994 [3]. From the above considerations it is obvious that a von Mise
 - generating $\boldsymbol{\xi}$ from the uniform distribution on $\mathbb{S}^{p-2}$
 - generating $t$ on the interval $[-1,1]$ from the marginal distribution, which can be shown to be [1]
 
-\begin{equation}
+\begin{equation*}
 \left(\frac{\kappa}{2} \right)^{p/2 -1}
 \frac{1}{\Gamma(\frac{p-1}{2})\Gamma(\frac{1}{2}) I_{\frac{p-1}{2}}(\kappa)}
 e^{\kappa t} (1-t^{2})^{\frac{p-3}{2}}
-\end{equation}
+\end{equation*}
 
 - and then combining them using $\mathbf{x} = t \boldsymbol{\mu} + \sqrt{1-t^{2}} \boldsymbol{\xi}$ to produce pseudo-random unit vectors with a von Mises-Fisher distribution
 
